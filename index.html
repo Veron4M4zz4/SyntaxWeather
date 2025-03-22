@@ -420,14 +420,7 @@
                 <span class="logo-icon">☀️</span>
                 <span>SyntaxWeather</span>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Forecast</a></li>
-                    <li><a href="#">Maps</a></a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
+
         </header>
 
         <section class="hero">
@@ -460,8 +453,8 @@
     </footer>
 
     <script>
-        // API Key para a nossa API   
-        const apiKey = '43ff12bc45fcebd8ed2eb941c5678acf'; // Aquui a chave da minha API 
+        // API Key para a nossa API
+        const apiKey = '43ff12bc45fcebd8ed2eb941c5678acf'; // Aquui a chave da minha API
 
         // Default cities to display
         const defaultCities = ['New York', 'London', 'Tokyo', 'Sydney'];
@@ -489,7 +482,7 @@
             'default': '🌡️'
         };
 
-        // Função para pegar o icone do tempo 
+        // Função para pegar o icone do tempo
         function getWeatherIcon(weatherMain) {
             return weatherIcons[weatherMain] || weatherIcons['default'];
         }
@@ -524,7 +517,7 @@
             const card = document.createElement('div');
             card.className = 'card';
             card.innerHTML = `
-                <h3>${data.name}, ${data.sys.country}</h3>  
+                <h3>${data.name}, ${data.sys.country}</h3>
                 <div class="weather-icon">${icon}</div>
                 <div class="temp">${temp}°C</div>
                 <p class="weather-description">${description}</p>
@@ -578,7 +571,7 @@
             }
         }
 
-        // Função para carregar os dados daz cidade pesquisada 
+        // Função para carregar os dados daz cidade pesquisada
         async function searchCity() {
             const city = searchInput.value.trim();
 
